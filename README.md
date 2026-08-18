@@ -1,4 +1,9 @@
-# <img src="https://raw.githubusercontent.com/vishwastiwari0507-design/SHiT/main/SHiT_pkg-main/logo%20copy.png" alt="SHiT" width="25%">
+
+# <img src=https://github.com/vishwastiwari0507-design/SHiT/blob/main/SHiT_pkg-main/logo2.png alt="SHiT" width="25%">
+
+
+
+"https://raw.githubusercontent.com/vishwastiwari0507-design/SHiT/main/SHiT_pkg-main/logo%20copy.png"
 
 
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/vishwastiwari0507-design/SHiT)
