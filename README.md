@@ -21,3 +21,38 @@
 - [Examples](#examples)
 - [Citation](#citation)
 - [License](#license)
+
+
+
+## Installation
+
+
+### (i) Installation from source 
+
+1. Create a virtual environment:
+   ```bash
+   conda create -n sea 
+   conda activate sea
+   ```
+
+2. Install SEA_toolkit:
+   ```bash
+   git clone https://github.com/vishwastiwari0507-design/SEA_toolkit.git
+   cd SEA_toolkit.git
+   pip install -r requirements.txt
+   pip install .
+   ```
+
+### (ii) Installation via pip
+
+```bash
+conda create -n sea python=3.12
+conda activate sea
+pip install SEA_toolkit
+```
+
+## Usage
+
+### Command line interface
+
+### Python API
