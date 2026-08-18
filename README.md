@@ -80,7 +80,7 @@ sea <command> [options]
 All tools are also importable as functions:
 
 ```python
-from SHiT.analysis import (
+from sea.analysis import (
     run_bond_order,
     run_rdf,
     run_dissociation,
@@ -88,7 +88,7 @@ from SHiT.analysis import (
     run_surface_coverage,
     run_atom_density_z,
 )
-from SHiT.convert import lammps_to_xyz, extract_frames
+from sea.convert import lammps_to_xyz, extract_frames
 
 # Bond order
 results = run_bond_order("traj.xyz", "input.txt", "para.txt", output_dir="out/")
@@ -121,8 +121,8 @@ extract_frames("traj.xyz", "subset.xyz", frames_to_keep={0,1,2,100,500})
 
 ### Bond-order analysis
 ```bash
-shit bond-order -d traj.xyz -i input.txt -p para.txt
-shit bond-order -d traj.xyz -i input.txt -p para.txt -o results/
+sea bond-order -d traj.xyz -i input.txt -p para.txt
+sea bond-order -d traj.xyz -i input.txt -p para.txt -o results/
 ```
 
 **input.txt** – one pattern per line:
@@ -156,8 +156,8 @@ Output: one `<pattern>.txt` per pattern with `frame\tcount`.
 
 ### RDF analysis
 ```bash
-shit rdf -d traj.xyz -i input.txt
-shit rdf -d traj.xyz -i input.txt -o rdf_out/
+sea rdf -d traj.xyz -i input.txt
+sea rdf -d traj.xyz -i input.txt -o rdf_out/
 ```
 
 **input.txt**:
@@ -191,8 +191,8 @@ Output: `O-O.txt`, `O-H.txt`, `Si-O.txt`, and `all.txt`.
 
 ### Water dissociation
 ```bash
-shit dissociation -d traj.xyz -i input.txt -p para.txt
-shit dissociation -d traj.xyz -i input.txt -p para.txt -o results.txt -v
+sea dissociation -d traj.xyz -i input.txt -p para.txt
+sea dissociation -d traj.xyz -i input.txt -p para.txt -o results.txt -v
 ```
 
 **input.txt**:
@@ -228,8 +228,8 @@ Output columns: `Frame  H+/H3O+  OH-  Total  H2O  Si-OH  Si-H`
 
 ### Water density profile
 ```bash
-shit water-density -d traj.xyz -i input.txt -p para.txt
-shit water-density -d traj.xyz -i input.txt -p para.txt -o density_out/
+sea water-density -d traj.xyz -i input.txt -p para.txt
+sea water-density -d traj.xyz -i input.txt -p para.txt -o density_out/
 ```
 
 **input.txt**:
@@ -260,8 +260,8 @@ Outputs: `H2O.txt`, `density_profile.txt`, `water_count.txt`
 
 ### Surface coverage
 ```bash
-shit surface-coverage -d traj.xyz -i input.txt -p para.txt
-shit surface-coverage -d traj.xyz -i input.txt -p para.txt -o coverage.txt
+sea surface-coverage -d traj.xyz -i input.txt -p para.txt
+sea surface-coverage -d traj.xyz -i input.txt -p para.txt -o coverage.txt
 ```
 
 **input.txt**:
@@ -302,8 +302,8 @@ O-H = 0.8-1.2
 
 ### Atom density along Z
 ```bash
-shit atom-density -d traj.xyz -i input.txt -p para.txt
-shit atom-density -d traj.xyz -i input.txt -p para.txt -o z_plots/
+sea atom-density -d traj.xyz -i input.txt -p para.txt
+sea atom-density -d traj.xyz -i input.txt -p para.txt -o z_plots/
 ```
 
 **input.txt**:
@@ -334,16 +334,16 @@ Outputs: `<element>_z_data.txt` and `<element>_z_distribution.png` per element, 
 ### Format conversion
 ```bash
 # Convert LAMMPS dump to XYZ
-shit lammps-to-xyz trajectory.lammpstrj trajectory.xyz
+sea lammps-to-xyz trajectory.lammpstrj trajectory.xyz
 
 # Extract frames (default logarithmic set)
-shit extract-frames trajectory.xyz extracted.xyz
+sea extract-frames trajectory.xyz extracted.xyz
 
 # Extract custom frame set
-shit extract-frames trajectory.xyz extracted.xyz --frames "0-5,10:50:5,100:500:50"
+sea extract-frames trajectory.xyz extracted.xyz --frames "0-5,10:50:5,100:500:50"
 
 # Just count frames
-shit extract-frames trajectory.xyz --count
+sea extract-frames trajectory.xyz --count
 ```
 
 ---
@@ -364,10 +364,10 @@ All input / parameter files accept flexible range formats:
 ## Package structure
 
 ```
-SHiT_pkg/
+SEA_pkg/
 ├── pyproject.toml
 ├── README.md
-└── SHiT/
+└── SEA/
     ├── __init__.py
     ├── cli.py                     ← unified CLI dispatcher  (shit <command>)
     ├── core/
