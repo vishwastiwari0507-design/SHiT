@@ -20,7 +20,6 @@
 - [Examples](#Examples)
 - [Package structure](#Package-structure)
 - [Citation](#citation)
-- [License](#license)
 
 
 
