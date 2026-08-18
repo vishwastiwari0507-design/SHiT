@@ -17,7 +17,6 @@
 - [Usage](#usage)
   - [Command line interface](#command-line-interface)
   - [Python API](#python-api)
-- [Documentation](#documentation)
 - [Examples](#examples)
 - [Citation](#citation)
 - [License](#license)
@@ -77,3 +76,42 @@ sea <command> [options]
 ---
 
 ### Python API
+
+All tools are also importable as functions:
+
+```python
+from SHiT.analysis import (
+    run_bond_order,
+    run_rdf,
+    run_dissociation,
+    run_water_density,
+    run_surface_coverage,
+    run_atom_density_z,
+)
+from SHiT.convert import lammps_to_xyz, extract_frames
+
+# Bond order
+results = run_bond_order("traj.xyz", "input.txt", "para.txt", output_dir="out/")
+
+# RDF
+rdfs = run_rdf("traj.xyz", "input.txt", output_dir="rdf/")
+r, g_r = rdfs["O-O"]   # numpy arrays
+
+# Dissociation
+frames = run_dissociation("traj.xyz", "input.txt", "para.txt", output_file="out.txt")
+
+# Water density
+bin_centers, density_matrix = run_water_density("traj.xyz", "input.txt", "para.txt")
+
+# Surface coverage
+cov = run_surface_coverage("traj.xyz", "input.txt", "para.txt")
+
+# Atom density Z
+hists = run_atom_density_z("traj.xyz", "input.txt", "para.txt")
+
+# Conversion
+lammps_to_xyz("dump.lammpstrj", "out.xyz")
+extract_frames("traj.xyz", "subset.xyz", frames_to_keep={0,1,2,100,500})
+```
+
+---
