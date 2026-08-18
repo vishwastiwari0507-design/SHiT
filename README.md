@@ -10,7 +10,6 @@
 
 ## Table of contents
 - [Description](#description)
-- [Supported calculation types and simulation engines](#supported-calculations-and-simulation-engines)
 - [Installation](#installation)
   - [(i) Installation from source](#i-installation-from-source)
   - [(ii) Installation via pip](#ii-installation-via-pip)
@@ -21,7 +20,8 @@
 - [Package structure](#Package-structure)
 - [Citation](#citation)
 
-
+## Description
+SEA-toolkit (Solid Electrolyte Analysis) is a Python package for post-processing molecular dynamics trajectories. It provides a unified CLI and API for bond-order counting, RDF, water dissociation, water/atom density profiles, and surface coverage analysis of solid electrolyte interfaces.
 
 ## Installation
 
