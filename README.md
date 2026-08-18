@@ -388,7 +388,7 @@ SHiT_pkg/
 
 ## Citation
 
-If you use aMACEing_toolkit in your research, please cite:
+If you use SEA_toolkit in your research, please cite:
 
 Tiwari, V. and Gu, C. and Elgabarty, H. and Brehm, M. "Atomistic Insights into Si(100) Surface Passivation by Water: ReaxFF Molecular Dynamics and Fine-Tuned Machine Learning Interatomic Potential Simulations." arXiv preprint arXiv:--- (2026).
 
