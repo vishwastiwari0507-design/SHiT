@@ -18,6 +18,7 @@
   - [Command line interface](#command-line-interface)
   - [Python API](#python-api)
 - [Examples](#Examples)
+- [Package structure](#Package-structure)
 - [Citation](#citation)
 - [License](#license)
 
@@ -347,3 +348,58 @@ shit extract-frames trajectory.xyz --count
 ```
 
 ---
+
+### Input file format notes
+
+#### Range values
+All input / parameter files accept flexible range formats:
+- `1.5-1.7`   dash-separated
+- `1.5:1.7`   colon-separated
+- `1.5 1.7`   space-separated
+
+#### PBC flags
+`T T F` = periodic in x and y, non-periodic in z.
+
+---
+
+## Package structure
+
+```
+SHiT_pkg/
+├── pyproject.toml
+├── README.md
+└── SHiT/
+    ├── __init__.py
+    ├── cli.py                     ← unified CLI dispatcher  (shit <command>)
+    ├── core/
+    │   ├── trajectory.py          ← XYZ + LAMMPS readers
+    │   ├── geometry.py            ← distances, angles, PBC
+    │   └── parsers.py             ← input / para file parsers
+    ├── analysis/
+    │   ├── bond_order.py
+    │   ├── rdf.py
+    │   ├── dissociation.py
+    │   ├── water_density.py
+    │   ├── surface_coverage.py
+    │   └── atom_density_z.py
+    └── convert/
+        └── __init__.py            ← lammps_to_xyz, extract_frames
+```
+
+## Citation
+
+If you use aMACEing_toolkit in your research, please cite:
+
+Tiwari, V. and Gu, C. and Elgabarty, H. and Brehm, M. "Atomistic Insights into Si(100) Surface Passivation by Water: ReaxFF Molecular Dynamics and Fine-Tuned Machine Learning Interatomic Potential Simulations." arXiv preprint arXiv:--- (2026).
+
+```
+@misc{------,
+      title={}, 
+      author={Vishwas Tiwari and Chenying Gu and Hossam Elgabarty and Martin Brehm},
+      year={2026},
+      eprint={-},
+      archivePrefix={arXiv},
+      primaryClass={-},
+      url={https://arxiv.org/}, 
+}
+```
