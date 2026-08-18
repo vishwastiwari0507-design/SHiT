@@ -1,11 +1,6 @@
 
 # <img src=https://github.com/vishwastiwari0507-design/SHiT/blob/main/SHiT_pkg-main/logo2.png alt="SHiT" width="25%">
 
-
-
-"https://raw.githubusercontent.com/vishwastiwari0507-design/SHiT/main/SHiT_pkg-main/logo%20copy.png"
-
-
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/vishwastiwari0507-design/SHiT)
 [![Paper](https://img.shields.io/badge/Paper-Publication-blue)](YOUR_PAPER_LINK)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
