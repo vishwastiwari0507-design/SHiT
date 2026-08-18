@@ -364,12 +364,12 @@ All input / parameter files accept flexible range formats:
 ## Package structure
 
 ```
-SEA_pkg/
+SEA_toolkit_pkg/
 ├── pyproject.toml
 ├── README.md
-└── SEA/
+└── SEA_toolkit/
     ├── __init__.py
-    ├── cli.py                     ← unified CLI dispatcher  (shit <command>)
+    ├── cli.py                     ← unified CLI dispatcher  (sea <command>)
     ├── core/
     │   ├── trajectory.py          ← XYZ + LAMMPS readers
     │   ├── geometry.py            ← distances, angles, PBC
