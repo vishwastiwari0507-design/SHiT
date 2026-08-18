@@ -55,4 +55,25 @@ pip install SEA_toolkit
 
 ### Command line interface
 
+All tools are available under a single `shit` command:
+
+```
+sea <command> [options]
+```
+
+### Available commands
+
+| Command | Original script | Description |
+|---|---|---|
+| `bond-order` | `bond_analysis.py` | Count di/tri/four-atom patterns |
+| `rdf` | `rdf.py` | Radial distribution functions |
+| `dissociation` | `Dissociation_H2O.py` | Water species classification |
+| `water-density` | `Water_density_analysis.py` | Z-directional water density |
+| `surface-coverage` | `Surface.Coverage.py` | Surface adsorbate coverage |
+| `atom-density` | `atom_vs_z_direction.py` | Atom density along Z from XYZ |
+| `lammps-to-xyz` | `lammpstrj_to_xyz.py` | Convert LAMMPS dump → XYZ |
+| `extract-frames` | `pp.py` / `extracting_specific_frames.py` | Extract frames from XYZ |
+
+---
+
 ### Python API
